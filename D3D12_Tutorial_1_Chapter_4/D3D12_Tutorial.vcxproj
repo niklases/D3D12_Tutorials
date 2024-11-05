@@ -127,20 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Common\d3dApp.cpp" />
+    <ClCompile Include="..\Common\d3dUtil.cpp" />
+    <ClCompile Include="..\Common\DDSTextureLoader.cpp" />
+    <ClCompile Include="..\Common\GameTimer.cpp" />
+    <ClCompile Include="..\Common\MathHelper.cpp" />
     <ClCompile Include="D3D12_Tutorial.cpp" />
-    <ClCompile Include="d3dApp.cpp" />
-    <ClCompile Include="d3dUtil.cpp" />
-    <ClCompile Include="DDSTextureLoader.cpp" />
-    <ClCompile Include="GameTimer.cpp" />
-    <ClCompile Include="MathHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="d3dApp.h" />
-    <ClInclude Include="d3dUtil.h" />
-    <ClInclude Include="d3dx12.h" />
-    <ClInclude Include="DDSTextureLoader.h" />
-    <ClInclude Include="GameTimer.h" />
-    <ClInclude Include="MathHelper.h" />
+    <ClInclude Include="..\Common\d3dApp.h" />
+    <ClInclude Include="..\Common\d3dUtil.h" />
+    <ClInclude Include="..\Common\d3dx12.h" />
+    <ClInclude Include="..\Common\DDSTextureLoader.h" />
+    <ClInclude Include="..\Common\GameTimer.h" />
+    <ClInclude Include="..\Common\MathHelper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

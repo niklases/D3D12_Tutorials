@@ -13,8 +13,8 @@
 #include <DirectXMath.h>
 #include <DirectXPackedVector.h>
 #include <dxgiformat.h>
-#include "d3dApp.h"
 #include <DirectXColors.h>
+#include "../Common/d3dApp.h"
 
 
 
