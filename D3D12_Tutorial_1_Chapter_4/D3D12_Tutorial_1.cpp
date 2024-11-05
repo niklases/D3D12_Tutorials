@@ -26,7 +26,6 @@ public:
     ~InitDirect3DApp();
 
     virtual bool Initialize()override;
-    void GetAdapters();
 
 private:
     virtual void OnResize()override;
@@ -49,9 +48,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
         InitDirect3DApp theApp(hInstance);
         if (!theApp.Initialize())
             return 0;
-
-        theApp.GetAdapters();
-
 
         return theApp.Run();
     }
@@ -82,13 +78,6 @@ bool InitDirect3DApp::Initialize()
 void InitDirect3DApp::OnResize()
 {
     D3DApp::OnResize();
-}
-
-void InitDirect3DApp::GetAdapters()
-{
-    std::wstring text = L"Found following adapters; i.e. GPUs or software adapters:");
-    OutputDebugString(text.c_str());
-    D3DApp::LogAdapters();
 }
 
 void InitDirect3DApp::Update(const GameTimer& gt)
