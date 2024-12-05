@@ -11,14 +11,15 @@
 // Linker --> System --> SubSystem --> Windows
 
 #include <windows.h> // for XMVerifyCPUSupport
-#include <WindowsX.h>
 #include "../Common/d3dApp.h"
 #include "../Common/MathHelper.h"
 #include "../Common/UploadBuffer.h"
 
+
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
 using namespace DirectX::PackedVector;
+
 
 struct Vertex
 {
@@ -220,7 +221,8 @@ void BoxApp::Draw(const GameTimer& gt)
         1, 0, 0, 0);
 
     // Indicate a state transition on the resource usage.
-    auto resource_barrier_trans = CD3DX12_RESOURCE_BARRIER::Transition(CurrentBackBuffer(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
+    auto resource_barrier_trans = CD3DX12_RESOURCE_BARRIER::Transition(
+        CurrentBackBuffer(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
     mCommandList->ResourceBarrier(1, &resource_barrier_trans);
 
     // Done recording commands.

@@ -1,5 +1,6 @@
 
 #include "d3dUtil.h"
+#include <iostream>
 #include <comdef.h>
 #include <fstream>
 
@@ -110,6 +111,8 @@ ComPtr<ID3DBlob> d3dUtil::CompileShader(
 
 	ComPtr<ID3DBlob> byteCode = nullptr;
 	ComPtr<ID3DBlob> errors;
+    std::wstring text = L"Compiling Shader: " + filename + L"\n";
+    ::OutputDebugString(text.c_str());
 	hr = D3DCompileFromFile(filename.c_str(), defines, D3D_COMPILE_STANDARD_FILE_INCLUDE,
 		entrypoint.c_str(), target.c_str(), compileFlags, 0, &byteCode, &errors);
 
